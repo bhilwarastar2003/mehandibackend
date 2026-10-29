@@ -10,6 +10,7 @@ import authRoutes from './routes/authRoutes.js';
 import adminRoutes from './routes/adminRoutes.js';
 
 const app = express();
+app.use(cookieParser());
 const here = path.dirname(fileURLToPath(import.meta.url));
 const clientOrigin = process.env.CLIENT_ORIGIN || 'http://localhost:5173';
 
