@@ -1,0 +1,37 @@
+import mongoose from 'mongoose';
+
+const siteSettingSchema = new mongoose.Schema({
+  key: { type: String, unique: true, default: 'main' },
+  brandName: { type: String, default: 'Mehndi Creations' },
+  logoUrl: { type: String, default: '' },
+  logoWidth: { type: Number, min: 20, max: 200, default: 38 },
+  logoHeight: { type: Number, min: 20, max: 200, default: 38 },
+  logoDesktopWidth: { type: Number, min: 20, max: 200, default: 38 },
+  logoDesktopHeight: { type: Number, min: 20, max: 200, default: 38 },
+  logoTabletWidth: { type: Number, min: 20, max: 200, default: 38 },
+  logoTabletHeight: { type: Number, min: 20, max: 200, default: 38 },
+  logoMobileWidth: { type: Number, min: 20, max: 200, default: 38 },
+  logoMobileHeight: { type: Number, min: 20, max: 200, default: 38 },
+  heroTitle: { type: String, default: 'Art that tells your love story.' },
+  heroSubtitle: { type: String, default: '' },
+  heroImageUrl: { type: String, default: '' },
+  heroButtonLabel: { type: String, default: 'Explore the collection' },
+  heroButtonUrl: { type: String, default: '/gallery' },
+  aboutTitle: { type: String, default: '' },
+  aboutText: { type: String, default: '' },
+  aboutImageUrl: { type: String, default: '' },
+  backgroundImageUrl: { type: String, default: '' },
+  bookingBannerImageUrl: { type: String, default: '' },
+  bookingBannerBackgroundColor: { type: String, default: '#713f3d' },
+  phone: { type: String, default: '' },
+  email: { type: String, default: '' },
+  whatsappUrl: { type: String, default: '' },
+  whatsappNumber: { type: String, default: '' },
+  address: { type: String, default: '' },
+  instagramUrl: { type: String, default: '' },
+  facebookUrl: { type: String, default: '' },
+  seoTitle: { type: String, default: '' },
+  seoDescription: { type: String, default: '' },
+}, { timestamps: true });
+
+export default mongoose.model('SiteSetting', siteSettingSchema);
